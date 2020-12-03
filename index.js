@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown');
+const Choices = require('inquirer/lib/objects/choices');
 const writeFileSync = util.promisify(fs.writeFile);
 
 // array of questions for user
@@ -36,18 +37,35 @@ const questions = [
         name: 'testing',
         message: 'What are the test instructions?',
     },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'What is your GitHub username?',
+        choices: ["MIT", "mpl-2.0", "osl-3.0" ]
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'What is your GitHub username?',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email and what is the best way to reach you?',
+    },
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFileSync()
+    fs.writeFileSync("OutputReadMe.md", generateMarkdown(data))
+    console.log("file written successfully")
 }
 
 // function to initialize program
 function init() {
 inquirer.prompt(questions)
 .then(data => { 
-    writeToFile("ReadMe.md", generateMarkdown(data));
+    writeToFile("OutputReadMe.md", generateMarkdown(data));
 })
 }
 
