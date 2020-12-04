@@ -2,7 +2,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown');
-const Choices = require('inquirer/lib/objects/choices');
 const writeFileSync = util.promisify(fs.writeFile);
 
 // array of questions for user
@@ -40,7 +39,7 @@ const questions = [
     {
         type: 'list',
         name: 'license',
-        message: 'What is your GitHub username?',
+        message: 'Which license do you want?',
         choices: ["MIT", "mpl-2.0", "osl-3.0" ]
     },
     {
@@ -57,7 +56,7 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFileSync("OutputReadMe.md", generateMarkdown(data))
+    writeFileSync(fileName, data)
     console.log("file written successfully")
 }
 
