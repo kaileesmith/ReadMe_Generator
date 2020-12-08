@@ -45,7 +45,7 @@ To use run node index.js in the terminal and follow the prompted questions. If y
 ![Output from application](./Images/Output.JPG)
 
 ## Video of Walkthrough on Using Application
-![Demo Video](./Images/Demo_Video.mp4)
+![Demo Video](./Demo_Video.mp4)
 
 ## Contributing
 Shoutout to Adam Birgenheier for the assistance!
