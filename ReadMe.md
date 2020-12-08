@@ -30,11 +30,19 @@ THEN I am taken to the corresponding section of the README
 ```
 ## Installation
 ```
-When installing the project, you will need to first type npm init into your terminal. Once initalized you will need to install inquirer by typing npm install inquirer in your terminal.
+When installing the project, you will need to first type npm init into your terminal. 
+Once initalized you will need to install inquirer by typing npm install inquirer in your terminal.
 ```
 
 ## Usage
 To use run node index.js in the terminal and follow the prompted questions. If you do not wish to answer one of the section simply hit enter and move to the next question.
+
+## Example of Questions
+![Questions in terminal](./Images/Questions.JPG)
+
+
+## Example Output
+![Output from application](./Images/Output.JPG)
 
 ## Contributing
 Shoutout to Adam Birgenheier for the assistance!
@@ -42,4 +50,4 @@ Shoutout to Adam Birgenheier for the assistance!
 ## Contact
  Feel free to reach out to me through GitHub with any questions you may have.
  
- ### GitHub: kaileesmith
+ GitHub: kaileesmith
